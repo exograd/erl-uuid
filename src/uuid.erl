@@ -16,14 +16,12 @@
 
 -export([nil/0, uuid/1, generate_v4/0, version/1, format/1, parse/1]).
 
--export_type([uuid/0, uuid_string/0, random_data_fun/0]).
+-export_type([uuid/0, uuid_string/0]).
 
 -type uuid() :: <<_:128>>.
 -type uuid_string() :: <<_:288>>.
 
 -type version() :: 1..5.
-
--type random_data_fun() :: fun((NbBytes :: pos_integer()) -> binary()).
 
 -spec nil() -> uuid().
 nil() ->
