@@ -99,8 +99,7 @@ hex_string_to_binary(<<>>, Acc) ->
 hex_string_to_binary(<<Digit1:8, Digit2:8, Rest/binary>>, Acc) ->
   Q1 = hex_digit_to_integer(Digit1),
   Q2 = hex_digit_to_integer(Digit2),
-  Byte = (Q1 bsl 4) bor Q2,
-  hex_string_to_binary(Rest, <<Acc/binary, Byte>>).
+  hex_string_to_binary(Rest, <<Acc/binary, Q1:4, Q2:4>>).
 
 -spec hex_digit_to_integer(char()) -> 0..15.
 hex_digit_to_integer(C) when C >= $0, C =< $9 ->
