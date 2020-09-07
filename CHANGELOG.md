@@ -1,4 +1,4 @@
-% erl-influx changelog
+% erl-uuid changelog
 
 # Next Version
 
