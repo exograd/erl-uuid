@@ -14,7 +14,7 @@
 
 {application, uuid,
  [{description, "Tools to generate and manipulate UUID values."},
-  {vsn, "1.0.0"},
+  {vsn, "git"},
   {registered, []},
   {applications,
    [kernel,
@@ -23,5 +23,4 @@
   {env, []},
   {modules, []},
 
-  {licenses, ["ISC"]}
- ]}.
+  {licenses, ["ISC"]}]}.
